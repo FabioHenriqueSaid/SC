@@ -1,6 +1,6 @@
-import 'package:contacts/ios/views/editor-contact.view.dart';
-import 'package:contacts/ios/styles.dart';
-import 'package:contacts/ios/views/details.view.dart';
+import 'package:sc/ios/views/editor-contact.view.dart';
+import 'package:sc/ios/styles.dart';
+import 'package:sc/ios/views/details.view.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeView extends StatelessWidget {

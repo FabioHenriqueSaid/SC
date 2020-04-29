@@ -1,5 +1,5 @@
-import 'package:contacts/android/views/details.view.dart';
-import 'package:contacts/android/views/editor-contact.view.dart';
+import 'package:sc/android/views/details.view.dart';
+import 'package:sc/android/views/editor-contact.view.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {

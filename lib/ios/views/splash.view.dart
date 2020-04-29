@@ -1,5 +1,7 @@
-import 'package:contacts/ios/styles.dart';
+import 'package:sc/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../styles.dart';
 
 class SplashView extends StatelessWidget {
   @override

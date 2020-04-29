@@ -1,8 +1,12 @@
-import 'package:contacts/ios/views/address.view.dart';
-import 'package:contacts/ios/styles.dart';
-import 'package:contacts/ios/views/editor-contact.view.dart';
-import 'package:contacts/models/contact.model.dart';
+import 'package:sc/ios/views/address.view.dart';
+import 'package:sc/ios/styles.dart';
+import 'package:sc/ios/views/editor-contact.view.dart';
+import 'package:sc/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:sc/models/contact.model.dart';
+
+import 'address.view.dart';
+import 'editor-contact.view.dart';
 
 class DetailsView extends StatelessWidget {
   @override
@@ -22,7 +26,7 @@ class DetailsView extends StatelessWidget {
                   CupertinoPageRoute(
                     builder: (context) => EditorContactView(
                       model: ContactModel(
-                        id: "1",
+                        id: 1,
                         name: "André Baltieri",
                         email: "andre@balta.io",
                         phone: "11 97214-2255",

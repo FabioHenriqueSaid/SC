@@ -1,5 +1,5 @@
-import 'package:contacts/android/styles.dart';
-import 'package:contacts/android/views/home.view.dart';
+import 'package:sc/android/styles.dart';
+import 'package:sc/android/views/home.view.dart';
 import 'package:flutter/material.dart';
 
 class AndroidApp extends StatelessWidget {
