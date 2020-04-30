@@ -3,7 +3,7 @@ import 'package:sc/ios/styles.dart';
 import 'package:sc/ios/views/editor-contact.view.dart';
 import 'package:sc/models/contact.model.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:sc/models/contact.model.dart';
+
 
 import 'address.view.dart';
 import 'editor-contact.view.dart';

@@ -2,7 +2,7 @@ import 'package:sc/android/views/address.view.dart';
 import 'package:sc/android/views/editor-contact.view.dart';
 import 'package:sc/models/contact.model.dart';
 import 'package:flutter/material.dart';
-import 'package:sc/models/contact.model.dart';
+
 
 import 'address.view.dart';
 import 'editor-contact.view.dart';

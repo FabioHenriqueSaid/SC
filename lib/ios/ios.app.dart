@@ -1,7 +1,7 @@
 import 'package:sc/ios/views/home.view.dart';
 import 'package:sc/ios/styles.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:sc/ios/views/home.view.dart';
+
 
 class IOSApp extends StatelessWidget {
   @override

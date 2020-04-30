@@ -1,12 +1,18 @@
-import 'dart:io';
-import 'package:sc/ios/ios.app.dart';
 import 'package:flutter/material.dart';
-import 'package:sc/android/android.app.dart';
+import 'package:sc/ui/login_page.dart';
 
-void main() {
-  if (Platform.isIOS) {
-    runApp(IOSApp());
-  } else {
-    runApp(AndroidApp());
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new MaterialApp(
+      title: 'TheGorgeousLogin',
+      theme: new ThemeData(
+
+        primarySwatch: Colors.blue,
+      ),
+      home: new LoginPage(),
+    );
   }
 }
