@@ -5,3 +5,6 @@ const  String CREATE_CONTATCTS_TABLE_SCRIPT =
 
 const String CREATE_CLIENTE_TABLE_SCRIPT = 
        "CREATE TABLE cliente(id integer primary key, [name] Text)";
+
+const String CREATE_DESCARTE_TABLE_SCRIPT = 
+       "CREATE TABLE descarte(id integer primary key, [name] Text)";
