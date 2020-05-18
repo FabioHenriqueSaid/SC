@@ -59,4 +59,24 @@ class ContractRepository
            return new List<ContactModel>();
        }
    }
+
+   Future<List<ContactModel>> search(String term) async {
+
+      try
+      { 
+       final Database db = await getDatabase();
+       final List<Map<String,dynamic>> maps = await db.query(
+          TABLE_NAME,
+          where:"name LIKE",
+          whereArgs: [
+            '%$term%'
+          ],
+       );
+      }
+      catch(ex){
+           print (ex);
+           return new List<ContactModel>();
+      }
+
+   }
 }
