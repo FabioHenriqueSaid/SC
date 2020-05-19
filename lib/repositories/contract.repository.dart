@@ -69,7 +69,8 @@ class ContractRepository
           TABLE_NAME,
           where:"name LIKE",
           whereArgs: [
-            '%$term%'
+            '%$term%',
+
           ],
        );
       }
@@ -78,5 +79,68 @@ class ContractRepository
            return new List<ContactModel>();
       }
 
+   }
+
+   Future<ContactModel> getContact(int id) async{
+
+       try{
+         final Database db = await getDatabase();
+         final List<Map<String,dynamic>> maps = await db.query(
+           TABLE_NAME,
+           where: "id = ?",
+           whereArgs: [id],
+         );
+             return ContactModel(
+               id: maps[0]['id'],
+               name:maps[0]['name'],
+               phone: maps[0]['phone'],
+               email:maps[0]['email'],
+               image: maps[0]['image'],
+               addressLine1: maps[0]['addressLine1'],
+               addressLine2: maps[0]['addressLine2'],
+               latLng: maps[0]['lating'],
+             );
+
+      
+
+       }
+       catch(ex)
+       { 
+        print(ex);
+        return new ContactModel(); 
+       }
+   }
+
+   Future update(ContactModel model) async{
+     try{
+       final Database db = await getDatabase();
+       await db.update(
+          TABLE_NAME,
+          model.toMap(),
+          where: "id = ?",
+          whereArgs: [model.id],
+       );
+     }
+     catch(ex){
+       print(ex);
+       return;
+     }
+   }
+
+   Future delete(int id) async
+   {
+     
+      try{
+       final Database db  = await getDatabase();
+       await db.delete(
+          TABLE_NAME,
+          where:"id = ?",
+          whereArgs: [id],
+       );
+      }
+      catch(ex){
+        print(ex);
+        return;
+      }
    }
 }
