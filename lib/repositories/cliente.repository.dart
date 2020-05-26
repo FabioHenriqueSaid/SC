@@ -133,5 +133,23 @@ class ClienteRepository
         return new Cliente(); 
        }
    }
+ 
+   Future updateImage(int id, String imagePath) async{
+      try{
+         final Database db = await getDatabase();
+         final model  = await getCliente(id);
+         
+         model.image = imagePath;
 
+         await db.update(
+            TABLE_NAME,
+            model.toMap(),
+            where: "id = ?",
+            whereArgs: [model.id],
+         );
+      }catch(ex){
+           print(ex);
+           return;
+      }
+   }
 }

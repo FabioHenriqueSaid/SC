@@ -6,6 +6,7 @@ class Cliente
   String endereco;
   String telefone;
   String email;
+  String image;
 
    Cliente
    ({
@@ -13,7 +14,8 @@ class Cliente
       this.nome,
       this.endereco,
       this.telefone,
-      this.email
+      this.email,
+      this.image
    });
 
  
