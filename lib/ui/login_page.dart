@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sc/style/theme.dart' as Theme;
 import 'package:sc/utils/bubble_indication_painter.dart';
+import 'package:sc/models/user.model.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key key}) : super(key: key);
@@ -11,11 +12,15 @@ class LoginPage extends StatefulWidget {
   _LoginPageState createState() => new _LoginPageState();
 }
 
+
+
 class _LoginPageState extends State<LoginPage>
+
     with SingleTickerProviderStateMixin {
 
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+    
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   final FocusNode myFocusNodeEmailLogin = FocusNode();
   final FocusNode myFocusNodePasswordLogin = FocusNode();
 
@@ -35,6 +40,8 @@ class _LoginPageState extends State<LoginPage>
   TextEditingController signupPasswordController = new TextEditingController();
   TextEditingController signupConfirmPasswordController =
       new TextEditingController();
+
+  
 
   PageController _pageController;
 
@@ -73,10 +80,10 @@ class _LoginPageState extends State<LoginPage>
                     Padding(
                       padding: EdgeInsets.only(top: 75.0),
                      child: new Image(
-                          width: 250.0,
-                          height: 191.0,
+                          width: 230.0,
+                          height: 230.0,
                           fit: BoxFit.fill,         
-                          image: new AssetImage('sc/assets/img/cars.png')),
+                          image: new AssetImage('assets/img/logo.png')),
                     ),
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
@@ -232,6 +239,7 @@ class _LoginPageState extends State<LoginPage>
                         child: TextField(
                           focusNode: myFocusNodeEmailLogin,
                           controller: loginEmailController,
+                          
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
                               fontFamily: "WorkSansSemiBold",
@@ -445,6 +453,9 @@ class _LoginPageState extends State<LoginPage>
   }
 
   Widget _buildSignUp(BuildContext context) {
+
+   
+
     return Container(
       padding: EdgeInsets.only(top: 23.0),
       child: Column(
@@ -647,9 +658,12 @@ class _LoginPageState extends State<LoginPage>
   }
 
   void _onSignInButtonPress() {
+   
     _pageController.animateToPage(0,
         duration: Duration(milliseconds: 500), curve: Curves.decelerate);
+
   }
+
 
   void _onSignUpButtonPress() {
     _pageController?.animateToPage(1,

@@ -1,6 +1,7 @@
 import 'package:sc/android/views/details.view.dart';
 import 'package:sc/android/views/editor-contact.view.dart';
 import 'package:flutter/material.dart';
+import 'package:sc/models/contact.model.dart';
 
 class HomeView extends StatelessWidget {
   @override
@@ -57,7 +58,11 @@ class HomeView extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => EditorContactView(),
+              builder: (context) => EditorContactView(
+                model: ContactModel(
+                  id: 0,
+                ),
+              ),
             ),
           );
         },
