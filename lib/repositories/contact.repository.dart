@@ -3,7 +3,7 @@ import 'package:sc/models/contact.model.dart';
 import 'package:sc/settings.dart';
 import 'package:sqflite/sqflite.dart';
 
-class ContractRepository
+class ContactRepository
 {
    Future<Database> getDatabase() async
    {
