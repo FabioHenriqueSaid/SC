@@ -1,20 +1,22 @@
-class Descarte
+class EmpresaColeta
 {
   int id;
   String nome;
   String telefone;
   String endereco;
-  String cpf;
   String email;
-
-    Descarte(
+  String tipoEmpresa;
+  String cnpj;
+ 
+    EmpresaColeta(
       {
        this.id,
        this.nome,
        this.telefone,
        this.endereco,
-       this.cpf,
-       this.email
+       this.email,
+       this.tipoEmpresa,
+       this.cnpj
       }
     );
 }

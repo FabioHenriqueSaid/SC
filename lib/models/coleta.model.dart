@@ -1,6 +1,5 @@
 class Coleta 
 {
-
   int id;
   String coletor;
   String descarte;
